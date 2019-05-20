@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Little Bistro | Booking </title>
+	<meta charset="utf-8">
+	<meta name="viewport" width="device-width, initial-scale=1">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, viewport-fit=cover" />
+	<meta http-equiv="content-language" content="en" />
+
+
+	<link rel="stylesheet" type="text/css" href="homeStyleSheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+</head>
+
+<body>
+	<!-- navbar: -->
+	<header>
+		<nav>
+			<div class="book-navBar-bg"> 
+				<!-- hamburger navbar: -->
+				<div class="book-burger-navbar-container"> <!--This container is used to turn the diplay on/off -->
+					<label for="book-nav-toggle" class="book-nav-toggle-label"><span></span></label>
+					<input id="book-nav-toggle" type="checkbox" class="book-nav-toggle">
+					<div class="book-burger-navbar">
+						<ul class="book-navBar-ul-burger">
+							<li><a href="bistro-index.html"><button class="book-btn book-btn-style book-btn-font">Home</button></a></li>
+							<li><a href="bistro-index.html#menu"><button class="book-btn book-btn-style book-btn-font">Menu</button></a></li>
+							<li><a href="bistro-index.html#gallery"><button class="book-btn book-btn-style book-btn-font">Gallery</button></a></li>
+						</ul>
+					</div>
+
+					<a href="bistro-index.html"> <!-- Navbar logo here-->
+						<img class="book-logo-1" src="Graphics/white-logo-sml-v2.png" title="The Litte Bistro Home">
+						<img class="book-logo-5" src="Graphics/white-logo-sml-v3.png" title="The Litte Bistro Home">
+					</a> 
+				</div>
+				<!-- orginal navbar: -->
+				
+				<ul class="book-navBar-ul-original">
+					<li class="li-horizontal"><a href="bistro-index.html"><button class="book-btn book-btn-style book-btn-font">Home</button></a></li>
+					<li class="li-horizontal"><a href="bistro-index.html#menu"><button class="book-btn book-btn-style book-btn-font">Menu</button></a></li>
+					<li class="li-horizontal"><a href="bistro-index.html#gallery"><button class="book-btn book-btn-style book-btn-font">Gallery</button></a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<!-- form: -->
+	<div class="booking-container">
+		<div class="form-container">
+			<form class="row">
+				<div class="col-b-12">
+					<!-- <h2 class="menu-header-style white">Booking</h2> -->
+					<img src="Graphics/white-logo-sml.png" class="book-logo-2">
+					<img src="Graphics/white-logo-sml-v2.png" class="book-logo-3">
+					<img src="Graphics/white-logo-sml-v3.png" class="book-logo-4">
+				</div>
+				<div class="col-b-12">
+					<input type="text" name="name" placeholder="Name" class="input-style" required>
+				</div>
+				<div class="col-b-4">
+					<input type="number" name="guests" placeholder="Number of people" min="0" max="20" class="input-style" required>
+				</div>
+				<div class="col-b-4 half">
+					<input type="date" name="date" class="input-style" min="2019-02-25" required>
+				</div>
+				<div class="col-b-4 half">
+					<input type="time" name="time" class="input-style" min="17:00" max="20:30" required>
+				</div>
+				<div class="col-b-12">
+					<input type="text" name="message" placeholder="Special requirements" class="input-style">
+				</div>
+				<div class="col-b-12">
+					<input type="phone" name="phonenumber" placeholder="Contact number" class="input-style" required>
+				</div>
+				<div class="col-b-12">
+					<button class="bookNow-btn bookNow-btn-font bookNow-btn-style hvr-trim">Book Now</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

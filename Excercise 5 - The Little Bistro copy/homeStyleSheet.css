@@ -1,0 +1,384 @@
+/* IMPORTS: ----------------------------------*/
+@charset "UTF-8";
+@import url('aboutStyleSheet.css');
+@import url('menuStyleSheet.css');
+/*@import url('gridSystemStyleSheet.css');*/
+@import url('galleryStyleSheet.css');
+@import url('bookingStyleSheet.css');
+@import url('footerStyleSheet.css');
+
+/* GENERAL STYLES: ---------------------------*/
+html {
+	font-size: 16px;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	}
+
+/*div {border: 1px solid red;}*/
+
+.line {
+	position: relative;
+	top: 0;
+	z-index: 1;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	border-top: 3px solid #cc6633;
+	width: 4%;
+}
+
+.bigger-text {
+	font-size: 1.3em;
+	font-family: 'Open Sans', 800;
+	letter-spacing: 8.5px;
+}
+
+.orange {color: #cc6633;}	
+
+.white {color: white;}
+
+
+/* HOME PAGE - THE LITTLE BISTRO ----------------*/
+
+/* BG IMAGE -------------------------------------*/
+.home-bgImage {
+	min-width: 100%;
+	min-height: 100%;
+	display: inline-block;
+	background-image: url("Images/bg-image-edited2.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* LOGO -----------------------------------------*/
+.logo-pos{
+	display: block;
+	margin: 400px auto;
+	margin-bottom: 290px;
+}
+.logo-size {
+	max-width: 588px;
+}
+
+/* NAV -----------------------------------------*/
+
+/* Hamburger Navbar: */
+/* This is here bcos the absolute position relies on its parents 'position' value to align */
+.burger-navbar-container {
+	display: none;
+}
+
+.burger-navbar {
+	position: relative;
+	display: none;
+}
+
+.burger-nav-pos {
+	position: absolute;
+	top: 65px; 
+	left: 45px;
+	list-style: none;
+	padding: 0;
+}
+
+/* NOTE: Orignally I made the .nav-pos display as none. So the the checkbox seemed not to work. 
+I'm meant to apply display: none to the nav as that's what is being targeted. */
+.nav-toggle:checked ~ .burger-navbar {
+	display: block;
+}
+
+/* NOTE: This is to hide the checkbox but keep the label shown */
+.nav-toggle	{
+	display: none;
+}
+
+
+/* Burger button style: */
+.nav-toggle-label {
+	position: absolute;
+	top: 50px;
+	left: 45px;
+	padding: 0;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label::before,
+.nav-toggle-label::after {
+	display: block;
+	background-color: white;
+	height: 3px;
+	width: 40px;
+	border-radius: 3px;
+	position: relative;
+}
+
+.nav-toggle-label::before,
+.nav-toggle-label::after {
+	content: '';
+	position: absolute;
+}
+
+.nav-toggle-label::before {
+	bottom: 8px;
+}
+
+.nav-toggle-label::after {
+	top: 8px;
+}
+
+.nav-toggle-label span:hover {
+	background-color: #cc6633;
+}
+
+/* Orignal Navbar */
+.nav-pos {
+	position: absolute;
+	top: 25px; 
+	left: 45px;
+	list-style: none;
+	padding: 0;
+}
+
+.btn-style {
+	padding: 10px;
+	margin-bottom: 20px;
+	background-color: transparent;
+	width: 170px;
+	border: 1px solid #cc6633;
+	border-radius: 2px;
+}
+
+.btn-font {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.1em;
+	letter-spacing: 2.5px;
+}
+
+.btn:active {
+	background-color: #cc6633;
+}
+
+button:focus {outline:0;}
+
+.hvr-trim {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+.hvr-trim:before {
+  content: '';
+  position: absolute;
+  border: 3px solid #cc6633;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.hvr-trim:hover:before, .hvr-trim:focus:before, .hvr-trim:active:before {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* SOCIAL MEDIA -------------------------------------------------*/
+.li-horizontal {
+	display: inline;
+}
+
+.sMedia-style {
+	width: 35px;
+	height: 35px;
+	fill: white;
+	margin-left: 30px;
+}
+
+.sMedia-style:hover {
+	fill: #cc6633;
+}
+
+.sMedia-pos {
+	position: absolute;
+	top: 25px; 
+	right: 45px;
+	padding: 0;
+	list-style: none;
+}
+
+/*Fixed-navbar social media: */
+.fixed-navbar-sMedia-style {
+	width: 35px;
+	height: 35px;
+	fill: white;
+	margin-left: 30px;
+}
+
+.fixed-navbar-sMedia-style:hover {
+	fill: #cc6633;
+}
+
+.fixed-navbar-sMedia-pos {
+	position: absolute;
+	top: 50px; 
+	right: 70px;
+	padding: 0;
+	list-style: none;
+}
+
+/* ADDRESS ---------------------------------------------------*/
+.address-style {
+	margin: 0;
+	padding: 15px;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.3em;
+	line-height: 50px;
+	letter-spacing: 6px;
+	justify-content: center;
+	text-align: center;
+}
+
+.address-container {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	padding: 25px 25px 25px 25px;
+}
+
+.location-link {
+	text-decoration: none;
+	color: white;
+}
+
+.location-link:hover {
+	color: #cc6633;
+}
+
+/* MEDIA QUERIES ---------------------------------------------*/
+/*lrg tablets (1024px) */
+@media only screen and (max-width: 1024px){
+	.nav-pos {
+		display: none;
+	}
+	.burger-navbar-container {
+		display: block;
+	}
+	.burger-nav-pos {
+		position: absolute;
+		top: 65px; 
+		left: 45px;
+		list-style: none;
+		padding: 0;
+	}
+	.sMedia-style {
+		width: 30px;
+		height: 30px;
+		margin-left: 10px;
+	}
+	.sMedia-pos {
+		position: absolute;
+		top: 25px; 
+		right: 35px;
+		padding: 0;
+		list-style: none;
+	}
+
+	.logo-size {
+		max-width: 50%;
+		max-height: 50%;
+		min-width: 336px;
+	}
+	.logo-pos {
+		display: block;
+		margin: 400px auto;
+		margin-bottom: 150px;
+	}
+	.bigger-text {
+		display: none;
+		font-size: 1.1em;
+	}
+}
+
+/*lrg mobile (480px)*/
+@media only screen and (max-width: 480px){
+	.nav-pos {
+		position: absolute;
+		top: 25px; 
+		left: 35px;
+		list-style: none;
+		padding: 0;
+	}
+	.btn-style {
+		padding: 5px;
+		margin-bottom: 10px;
+		background-color: transparent;
+		width: 100px;
+		border: 1px solid #cc6633;
+		border-radius: 2px;
+	}	
+	.btn-font {
+		color: white;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.1em;
+		letter-spacing: 2.5px;
+	}
+	.sMedia-style {
+		width: 30px;
+		height: 30px;
+		margin-left: 10px;
+	}
+	.sMedia-pos {
+		position: absolute;
+		top: 25px; 
+		right: 35px;
+		padding: 0;
+		list-style: none;
+	}
+	.logo-size {
+		max-width: 70%;
+		max-height: 70%;
+	}
+	.logo-pos {
+		display: block;
+		margin: 400px auto;
+		margin-bottom: 50px;
+	}
+	.address-style {
+		font-size: 1.1em;
+		line-height: 38px;
+		letter-spacing: 5px;
+	}
+	.bigger-text {
+		display: none;
+		font-size: 1.1em;
+	}
+}
+
+/*sml mobile (390px)*/
+@media only screen and (max-width: 390px){
+	.address-style {
+		font-size: .8em;
+		line-height: 30px;
+		letter-spacing: 5px;
+	}
+	.bigger-text {
+		display: none;
+		font-size: 1.1em;
+	}
+	
+}

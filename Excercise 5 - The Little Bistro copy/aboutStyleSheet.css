@@ -1,0 +1,91 @@
+/* ABOUT - THE LITTLE BISTRO ----------------*/
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	color: #353535;
+}
+
+* {
+	box-sizing: border-box;
+	}
+
+/* CONTAINER -------------------*/
+.about-container {
+	width: 100%;
+	padding: 100px;
+	margin: ;
+}
+
+.about-header-style {
+	font-family: 'Open Sans', serif;
+	font-size: 4em;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.about-style {
+	font-family: 'Playfair Display', serif;
+	font-size: 2.5em;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	text-align: center;
+}
+
+.about-style::first-letter {
+	font-size: 1.8em;
+}
+
+/* MEDIA QUERIES -------------------*/
+
+/*For lrg tablets (1024px)*/
+@media only screen and (max-width: 1024px){
+	.about-style {
+		font-size: 2em;
+	}
+	.about-header-style {
+		font-size: 3.5em;
+	}
+	.about-container {
+		padding: 50px 100px;
+}
+
+/*For sml tablets (768px)*/
+@media only screen and (max-width: 768px){
+	.about-style {
+		font-size: 1.8em;
+	}
+	.about-header-style {
+		font-size: 3.5em;
+	}
+	.about-container {
+		padding: 50px;
+	}
+}
+
+/*For lrg mobile (480px)*/
+@media only screen and (max-width: 480px){
+	.about-style {
+		font-size: 1.2em;
+	}
+	.about-header-style {
+		font-size: 3em;
+	}
+	.about-container {
+		height: auto;
+	}
+}
+
+/*For sml mobile (390px)*/
+@media only screen and (max-width: 390px){
+	.about-style {
+		font-size: 1em;
+	}
+	.about-header-style {
+		font-size: 2.5em;
+	}
+}

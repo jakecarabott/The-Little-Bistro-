@@ -1,0 +1,108 @@
+/* GALLERY STYLESHEET -----------*/
+
+.gallery-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(833px, 1fr));
+	/*grid-template-columns: repeat(3, 1fr);*/
+	grid-gap: 0px;	
+	grid-column-gap: 0; 
+	grid-row-gap: 0;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.galleryImage-style {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.galleryImage-hvr:hover {
+	opacity: .8;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(50%);
+	-moz-filter: grayscale(50%);
+	cursor: pointer; 
+}
+
+/* Lightbox Image: -----------------------*/
+.gallery-lightbox-container {
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .8);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	/*display: flex;
+	transform: scale(0,0);
+	transition: transform ease-in-out 2ms;*/
+}
+
+.gallery-lightbox-container:target {
+	display: flex;
+	/*transition: scale(1,1);*/
+}
+
+.gallery-lighbox-content {
+	position: relative;
+	background-color: white;
+	padding: 30px;
+}
+
+.gallery-lightbox-close {
+	position: absolute;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.gallery-lightbox-image-style {
+	display: block;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Close Button: ----------------------*/
+/*Used the psedo element to put X :after instead of in the HTML markup. Allows better control & implies it there.*/
+.gallery-lightbox-close::after {
+	content: 'X';
+	font-family: helvetica;
+	font-weight: 700;
+	font-size: 30px;
+}
+
+.gallery-lightbox-close:hover {
+	color: #cc6633;
+	}
+
+/*lrg mobile (480px)*/
+@media only screen and (max-width: 480px){
+	.galleryImage-style {
+	width: 60%;	
+	}
+	.gallery-container {
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+
+/*lrg mobile (390px)*/
+@media only screen and (max-width: 390px){
+	.galleryImage-style {
+	width: 50%;	
+	}
+	.gallery-container {
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+
+

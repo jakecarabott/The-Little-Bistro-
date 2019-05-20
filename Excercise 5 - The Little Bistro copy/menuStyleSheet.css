@@ -1,0 +1,183 @@
+/* MENU - THE LITTLE BISTRO ----------------*/
+
+
+* {
+	box-sizing: border-box;
+}
+
+.menu-container {
+	clear: both;
+	width: 100%;
+	height: 1500px;
+	padding: 50px 80px;
+	margin: 0;
+}
+
+.menu-header-style{
+	font-family: 'Open Sans', serif;
+	font-size: 4em;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.menu-title {
+	border-bottom: 1px solid #cc6633;
+	color: #cc6633;
+	padding: 6px;
+	padding-top: 75px;
+	width: 100%;
+	text-align: center;
+}
+
+.menu-title-2 {
+	border-bottom: 1px solid #cc6633;
+	color: #cc6633;
+	padding: 6px;
+	width: 100%;
+	text-align: center;
+}
+
+.menuItem-center {
+	padding-left: 33.33%;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.bold-font {
+	color: #cc6633;
+	font-weight: bolder;
+	font-family: 'Open Sans'
+}
+
+/* Back to top button -------------------*/
+.toTop-btn-container {
+	position: relative;
+	z-index: 30;
+	left: 0px;
+	right: 0px;
+	margin-top: 50px;
+	width: 100%;
+  	font-size: 1.5em;
+  	text-align: center;
+}
+
+.toTop-line {
+	position: relative;
+	top: 25px;
+	z-index: 1;
+	display: block;
+	margin: 0 auto;
+	border-top: 1px solid #cc6633;
+	width: 100%;
+}
+
+.toTop-btn-font {
+	color: #cc6633;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1px;
+}
+
+.toTop-btn {
+	position: relative;
+	z-index: 2;
+	border: 1px solid #cc6633;
+	width: 250px;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 10px; 	
+	background-color: white;
+  	cursor: pointer;
+  	text-align: center;
+}
+
+.toTop-btn:active {
+	background-color: #cc6633;
+	color: white;
+}
+
+/* Grid System ------------------------------------*/
+
+.col-1 {width: 8.33%}
+.col-2 {width: 16.66%}
+.col-3 {width: 25%}
+.col-4 {width: 33.33%}
+.col-5 {width: 41.66%}
+.col-6 {width: 50%}
+.col-7 {width: 58.33%}
+.col-8 {width: 66.66%}
+.col-9 {width: 75%}
+.col-10 {width: 83.33%}
+.col-11 {width: 91.66%}
+.col-12 {width: 100%}
+
+[class*="col-"] {
+	float: left;
+	padding: 15px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Media Queries -----------------------------------*/
+
+@media only screen and (max-width: 2000px){
+	[class*="col-"] {
+		width: 50%;
+	}
+	.menuItem-center {
+		padding-left: 0;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 1024px){
+	.menu-header-style {
+		font-size: 3.5em;
+	}
+}
+
+@media only screen and (max-width: 900px){
+	[class*="col-"] {
+		width: 100%;
+	}
+	.menu-container {
+		padding: 50px 40px;
+	}
+	.menuItem-center {
+		padding-left: 0;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.menu-header-style {
+		font-size: 3.5em;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	[class*="col-"] {
+		width: 100%;
+	}
+	.menu-container {
+		padding: 50px 20px;
+	}
+	.menuItem-center {
+		padding-left: 0;
+		text-align: center;
+	}
+	.menu-header-style {
+		font-size: 3em;
+	}
+}
+
+@media only screen and (max-width: 390px){
+	.menu-header-style {
+		font-size: 2.5em;
+	}
+}
+

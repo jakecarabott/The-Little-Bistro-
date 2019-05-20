@@ -1,0 +1,137 @@
+/*FOOTER STYLE SHEET ---------------*/
+/*div	{border: 1px solid red;}*/
+
+.footer-container {
+	clear: both;
+    padding: 50px 300px;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    z-index: 31;
+    display: block;
+	width:100%;
+	background-color: black;
+}
+
+.footerContent-center{
+	text-align: center;
+	padding: 0;
+}
+
+.footer-logoPos {
+	display: block;
+	margin: 0 auto;
+	/*width: 60%;*/
+}
+
+.footer-logo-1 {
+	display: block;
+	width: 365px;
+}
+
+.footer-logo-2 {
+	display: none;
+	width: 365px;
+}
+
+.footer-logo-3 {
+	display: none;
+	width: 100px;
+}
+
+.booking-link {
+	margin-left: -5px;
+	border: .5px solid black;
+	color: #cc6633;
+	text-decoration: none;
+	padding: 5px;
+}
+
+.booking-link:hover {
+	padding: 5px;
+	border: .5px solid #cc6633;
+	border-radius: 5px;
+}
+
+.booking-link:active {
+	color: white;
+	background-color: #cc6633;
+	padding: 5px;
+	border: .5px solid #cc6633;
+	border-radius: 5px;
+}
+
+.footer-sMedia-style {
+	width: 35px;
+	height: 35px;
+	fill: white;
+	margin: 0 10px;
+}
+
+.footer-sMedia-style:hover {
+	fill: #cc6633;
+}
+
+
+/* Footer Grid System ----------------------*/
+
+.col-f-1 {width: 8.33%}
+.col-f-2 {width: 16.66%}
+.col-f-3 {width: 25%}
+.col-f-4 {width: 33.33%}
+.col-f-5 {width: 41.66%}
+.col-f-6 {width: 50%}
+.col-f-7 {width: 58.33%}
+.col-f-8 {width: 66.66%}
+.col-f-9 {width: 75%}
+.col-f-10 {width: 83.33%}
+.col-f-11 {width: 91.66%}
+.col-f-12 {width: 100%}
+
+[class*="col-f-"] {
+	float: left;
+	padding: 15px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Media Queries -----------------------------*/
+
+@media only screen and (max-width: 1700px) {
+	.footer-container {		
+		padding: 50px 150px;
+	}
+	[class*="col-f-"] {
+		width: 100%;
+	}
+	.footer-container {
+		top: 150px;
+	}
+	.footer-logo-1 {
+		display: none
+	}
+	.footer-logo-2 {
+		display: block;
+		width: 300px
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.footer-container {
+		padding: 50px 5px;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.footer-logo-2 {
+		display: none;
+	}
+	.footer-logo-3 {
+		display: block;
+	}
+} 
+

@@ -1,0 +1,333 @@
+/* BOOKING STYLESHEET  ----------*/
+
+/*div { border: 1px solid red;}*/
+
+* {
+	box-sizing: border-box;
+}
+
+/* NAV BAR ---------------------------------------*/
+:root {
+	--background: rgba(0, 0, 0, 1);
+}
+/* Hamburger Navbar: */
+/* This is here bcos the absolute position relies on its parents 'position' value to align */
+.book-burger-navbar-container {
+	/*display: none;*/
+}
+
+.book-burger-navbar {
+	position: relative;
+	display: none;
+}
+
+/* NOTE: Orignally I made the .nav-pos display as none. So the the checkbox seemed not to work. 
+I'm meant to apply display: none to the nav as that's what is being targeted. */
+.book-nav-toggle:checked ~ .book-burger-navbar {
+	display: block;
+}
+
+/* NOTE: This is to hide the checkbox but keep the label shown */
+.book-nav-toggle	{
+	display: none;
+}
+
+
+/* Burger button style: */
+.book-nav-toggle-label {
+	/* Turn display on after 1600px */
+	display: none; 
+	position: absolute;
+	top: 50px;
+	right: 45px;
+	padding: 0;
+}
+
+.book-nav-toggle-label span,
+.book-nav-toggle-label::before,
+.book-nav-toggle-label::after {
+	display: block;
+	background-color: white;
+	height: 3px;
+	width: 40px;
+	border-radius: 3px;
+	position: relative;
+}
+
+.book-nav-toggle-label::before,
+.book-nav-toggle-label::after {
+	content: '';
+	position: absolute;
+}
+
+.book-nav-toggle-label::before {
+	bottom: 8px;
+}
+
+.book-nav-toggle-label::after {
+	top: 8px;
+}
+
+.book-nav-toggle-label span:hover {
+	background-color: #cc6633;
+}
+
+/* Orignal Navbar: */
+.book-logo-1 {
+	position: fixed;
+	z-index: 15;
+	width: 170px;
+	padding-top: 25px;
+	padding-left: 45px;
+}
+
+.book-logo-2 {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.book-logo-3 {
+	display: none;
+	margin: 0 auto;
+	max-width: 75%;
+}
+
+.book-logo-4 {
+	display: none;
+	margin: 0 auto;
+	max-width: 30%;
+}
+/* Hat icon: */
+.book-logo-5 {
+	position: absolute;
+	left: 100px;
+	top: 35px;
+	width: 55px;
+	display: none;
+}
+
+.book-navBar-bg {
+	position: fixed;
+	top: 0;
+	padding: 0px 0px;
+	display: inline-block;
+	width: 100%;
+	height: 123px;
+	background: var(--background);
+}
+
+.book-navBar-ul-burger {
+	position: absolute;
+	top: 55px;
+	right: 0px;
+	padding-bottom: 10px;
+	list-style: none;
+	text-align: right;
+	background-color: var(--background);
+	width: 100%;
+}
+
+.book-navBar-ul-original {
+	position: absolute;
+	top: 38px;
+	right: 0px;
+	padding-bottom: 10px;
+	list-style: none;
+	text-align: right;
+	background-color: var(--background);
+	width: 100%;
+}
+
+.book-btn-style {
+	padding: 5px 45px 5px 0;
+	margin: 5px 0;
+	background-color: transparent;
+	border: none;
+	text-align: right;
+	/*border: 1px solid #cc6633;*/
+	/*border-radius: 2px;*/
+}
+
+.book-btn-font {
+	color: white;
+	justify-content: right;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.1em;
+	letter-spacing: 2.5px;
+}
+
+.book-btn:hover {
+	color: #cc6633;
+}
+
+.book-btn:active {
+	color: #cc6633;
+}
+
+/*BG IMAGE: --------------------------------------*/
+.booking-container {
+	min-width: 100%;
+	/*height: 120%;*/
+	height: 1365px;
+	margin: 0;
+	background-image: url("Images/bg-image-edited2.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*FORM: -----------------------------------------*/
+.menu-header-style{
+	font-family: 'Open Sans', serif;
+	font-size: 4em;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.form-container {
+	display: block;
+	margin: 0px auto;
+	padding-top: 250px;
+	width: 50%;
+}
+
+.booking-header-style {
+	display: none;
+	font-family: 'Open Sans', serif;
+	font-size: 4em;
+	font-weight: bolder;
+	text-align: center;
+	color: white;
+}
+
+.input-style {
+	color: white;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	background-color: rgba(0, 0, 0, .5);
+	border: none;
+	border-radius: 50px;
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1.5px;
+}
+
+input:focus {
+	outline: 0;
+	border: 1px solid #cc6633;
+}
+
+input::placeholder {
+	color:white;
+}
+
+.bookNow-btn-style {
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: rgba(0, 0, 0, .5);
+	width: 100%;
+	border: 1px solid #cc6633;
+	border-radius: 2px;
+}
+
+.bookNow-btn-font {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
+	letter-spacing: 2.5px;
+}
+
+.bookNow-btn:active {
+	background-color: #cc6633;
+}
+
+/* GRID SYSTEM:; ----------------------*/
+
+  .col-b-1 {width: 8.33%;}
+  .col-b-2 {width: 16.66%;}
+  .col-b-3 {width: 25%;}
+  .col-b-4 {width: 33.33%;}
+  .col-b-5 {width: 41.66%;}
+  .col-b-6 {width: 50%;}
+  .col-b-7 {width: 58.33%;}
+  .col-b-8 {width: 66.66%;}
+  .col-b-9 {width: 75%;}
+  .col-b-10 {width: 83.33%;}
+  .col-b-11 {width: 91.66%;}
+  .col-b-12 {width: 100%;}
+
+[class*="col-"] {
+	float: left;
+	padding: 15px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* MEDIA QUERIES: ----------------------------------*/
+@media only screen and (min-width: 1600px){
+	/* This is so if the burger menu is expanded the nav buttons will disapear beyond 1600px. 
+	NOTE: Removing this will keep them there */
+	.book-navBar-ul-burger {
+		display: none;
+	}
+}
+@media only screen and (max-width: 1600px) {
+	.form-container {
+		width: 65%;
+	}
+	[class*="col-"] {
+	  width: 100%;
+	}
+	.half { width: 50%;
+	}
+	.book-navBar-ul-original {
+		display: none;
+	}
+	.book-nav-toggle-label {
+		display: block;
+	}
+}
+@media only screen and (max-width: 1020px) {
+	.booking-header-style {
+		display: block;
+	}
+	.book-logo-2 {
+		display: none;
+	}
+	.book-logo-3 {
+		display: block;
+	}
+	.form-container {
+		width: 85%;
+	}
+}
+@media only screen and (max-width: 786px) {
+	.input-style {
+		font-size: 22px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.input-style {
+		font-size: 20px;
+	}
+	.bookNow-btn-font {
+		font-size: 22px;
+	}
+}
+@media only screen and (max-width: 390px){
+	.book-logo-1 {
+		display: none;
+	}
+	.book-logo-5 {
+		display: block;
+		left: 50px;
+	}
+}
+	
+	

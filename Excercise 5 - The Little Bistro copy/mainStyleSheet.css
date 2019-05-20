@@ -1,0 +1,47 @@
+/* MAIN STYLE SHEET (MOTHER) */
+
+@charset "UTF-8";
+@import url('homeStyleSheet.css')
+@import url('aboutStyleSheet.css');
+@import url('menuStyleSheet.css');
+@import url('gridSystemstyleSheet.css')
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+}
+
+* {
+	box-sizing: border-box;
+	}
+
+.header-style {
+	font-family: 'Open Sans', serif;
+	font-size: 4em;
+	font-weight: bolder;
+}
+
+.line {
+	position: relative;
+	top: 50%;
+	z-index: 1;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	border-top: 3px solid #cc6633;
+	width: 4%;
+}
+
+.bigger-text {
+	font-size: 1.3em;
+	font-family: 'Open Sans', 800;
+	letter-spacing: 8.5px;
+}
+
+.orange {
+	color: #cc6633;
+}	
